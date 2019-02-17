@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.astuetz.PagerSlidingTabStrip;
 
+import ketank.bloodbank.Adapters.StockAdapter;
 import ketank.bloodbank.R;
 
 public class BankMainActivity extends AppCompatActivity {
@@ -20,9 +21,23 @@ public class BankMainActivity extends AppCompatActivity {
         viewPager= findViewById(R.id.viewpager);
         tabsStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 
+        tabsStrip.setShouldExpand(true);
+
+        StockAdapter adapter = new StockAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(adapter);
+
+        tabsStrip.setViewPager(viewPager);
+
+
+
+
 
 
 
 
     }
+
+
+
 }

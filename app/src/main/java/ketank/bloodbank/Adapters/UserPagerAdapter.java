@@ -5,13 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import ketank.bloodbank.Fragments.BankDonorsFragment;
 import ketank.bloodbank.Fragments.BankStock;
 
-public class StockAdapter extends FragmentPagerAdapter {
-    String [] title = {"Stock","Donors NearBy"};
+public class UserPagerAdapter extends FragmentPagerAdapter {
+    String [] title = {"Blood Banks","Donors NearBy"};
 
-    public StockAdapter(FragmentManager childFragmentManager)
+    public UserPagerAdapter(FragmentManager childFragmentManager)
     {
         super(childFragmentManager);
 
@@ -26,7 +25,7 @@ public class StockAdapter extends FragmentPagerAdapter {
         if(position==0) {
             return new BankStock();
         }else
-            return new BankDonorsFragment();
+            return new BankStock();
 
 
     }
